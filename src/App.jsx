@@ -17,13 +17,13 @@ function App() {
           <NavLink to="/books" className="App-link" exact>
             Books
           </NavLink>
+          <Switch>
+            <Route path="/books/:id" component={BookDetail} />
+            <Route path="/books" component={BookList} />
+            <Route path="/" component={Home} />
+          </Switch>
         </header>
         <BookList />
-        <Switch>
-          <Route path="/books/:id" component={BookDetail} />
-          <Route path="/books" component={BookList} />
-          <Route path="/" component={Home} />
-        </Switch>
       </Router>
     </div>
   )
