@@ -12,10 +12,6 @@ function App() {
         <header>
           <h1>Library Catalog </h1>
           <nav>
-            <NavLink to="/" exact>
-              {' '}
-              Home{' '}
-            </NavLink>
             <NavLink to="/books" exact>
               Library
             </NavLink>
