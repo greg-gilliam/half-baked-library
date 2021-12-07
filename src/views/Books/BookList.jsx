@@ -21,11 +21,11 @@ function BookList() {
       <Link className="link" to="/">{` Homepage`}</Link>
       <ul className="book-list" aria-label="book list">
         {books.map((book) => (
-          <li key={book.book_id}>
-            <Link to={`/books/${book.book_id}`}>
+          <Link to={`/books/${book.book_id}`}>
+            <li key={book.book_id}>
               <Book book={book} />
-            </Link>
-          </li>
+            </li>
+          </Link>
         ))}
       </ul>
     </>

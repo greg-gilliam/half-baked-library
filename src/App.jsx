@@ -8,30 +8,30 @@ function App() {
   // TODO: Add routes to books & views
   return (
     <section>
-      <main className="container">
-        <Router>
-          <header>
-            <h1>Library Catalog </h1>
-            <nav>
-              <NavLink to="/" exact>
-                {' '}
-                Home{' '}
-              </NavLink>
-              <NavLink to="/books" exact>
-                Library
-              </NavLink>
-            </nav>
-          </header>
+      <Router>
+        <header>
+          <h1>Library Catalog </h1>
+          <nav>
+            <NavLink to="/" exact>
+              {' '}
+              Home{' '}
+            </NavLink>
+            <NavLink to="/books" exact>
+              Library
+            </NavLink>
+          </nav>
+        </header>
+        <main className="container">
           <Switch>
-            <Route exact path="/books/:id" component={BookDetail} />
-            <Route exact path="/books" component={BookList} />
-            <Route exact path="/" component={Home} />
+            <Route path="/books/:id" component={BookDetail} />
+            <Route path="/books" component={BookList} />
+            <Route path="/" component={Home} />
           </Switch>
-        </Router>
-      </main>
-      <footer>
-        <p>Footer</p>
-      </footer>
+        </main>
+        <footer>
+          <p>Footer</p>
+        </footer>
+      </Router>
     </section>
   )
 }
