@@ -7,16 +7,32 @@ import Home from './views/Books/Home'
 function App() {
   // TODO: Add routes to books & views
   return (
-    <main className="container">
-      <Router>
-        <h1>Library Catalog </h1>
-        <Switch>
-          <Route path="/books/:id" component={BookDetail} />
-          <Route path="/books" component={BookList} />
-          <Route path="/" component={Home} />
-        </Switch>
-      </Router>
-    </main>
+    <section>
+      <main className="container">
+        <Router>
+          <header>
+            <h1>Library Catalog </h1>
+            <nav>
+              <NavLink to="/" exact>
+                {' '}
+                Home{' '}
+              </NavLink>
+              <NavLink to="/books" exact>
+                Library
+              </NavLink>
+            </nav>
+          </header>
+          <Switch>
+            <Route exact path="/books/:id" component={BookDetail} />
+            <Route exact path="/books" component={BookList} />
+            <Route exact path="/" component={Home} />
+          </Switch>
+        </Router>
+      </main>
+      <footer>
+        <p>Footer</p>
+      </footer>
+    </section>
   )
 }
 

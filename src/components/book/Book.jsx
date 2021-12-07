@@ -8,7 +8,7 @@ function Book({
 }) {
   return (
     <article className="book">
-      {/* {showDetail && <Link>Book</Link>} */}
+      {showDetail && <Link to="/books">Back to Library</Link>}
       <h3>{title}</h3>
       <address>
         {authors.map((author) => (
